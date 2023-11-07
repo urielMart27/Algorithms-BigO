@@ -22,8 +22,8 @@ namespace Algorithms_BigOLab
             {
                 return false;
             }
-
         }
+
 
         //Task 2 
         // O(n) Linear Time 
@@ -37,23 +37,30 @@ namespace Algorithms_BigOLab
                 }
             }
             return true;
+        }
+
+
+        //Task 3 
+        // 0(n) Linear Time
+        public static bool IsNameRepeated(List<string> names)
+        {
+            HashSet<string> singleNames = new HashSet<string>();
+
+            foreach (string name in names)
+            {
+                if (singleNames.Contains(name))
+                {
+                    return true;
+                }
+                else
+                {
+                    singleNames.Add(name);
+                }
+            }
+            return false;
 
         }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        
 
     }
 }
